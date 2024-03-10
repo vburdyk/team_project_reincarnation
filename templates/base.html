@@ -20,7 +20,7 @@
     <div class="container">
         <div class="nav">
             <h1 class="header_title">
-                <a href="">
+                <a href="/">
                     MUSEUM
                 </a>
             </h1>
@@ -54,12 +54,12 @@
                         </a>
                     </li>
                     {% if user.is_authenticated %}
-                        <li>
-                            <p style="color: white">{{ request.user }}</p>
-                        </li>
+                        <a href="{% url 'museum:logout' %}">
+                            Вийти
+                        </a>
                     {% else %}
                         <a href="{% url 'museum:signin' %}">
-                            Вхід
+                            Увійти
                         </a>
                     {% endif %}
                 </ul>
