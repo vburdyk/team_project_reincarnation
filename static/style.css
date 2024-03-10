@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.container {
+    width: 70vw;
+    margin: 0 auto;
+}
+
+.header { /* редагування вигляду header */
+    background: black center no-repeat; /* встановлення зображення */
+    background-size: cover; 
+    height: 20vh; 
+}
+
+.nav { /* редагування розміщення heading */
+    display: flex;
+    height: 37vh;
+    flex-direction: column;
+    justify-content: end;
+    padding-bottom: 20vh;
+}
+
+h1, h2 { /* відсутність відступів у заголовків за замовчуванням */
+    padding: 0;
+    margin: 0;
+}
+
+ul, li { /* розташування списків */
+    display: flex;
+    align-items: center;
+}
+
+.header a { /* встановлення стилю */
+    color: white;
+}
+
+.header_title a { /* встановлення стилю для логотипа */
+    font-size: 60px;  
+    letter-spacing:0.5vw;
+}
+
+.btn { /* програмування кнопки */
+    padding: 0.3vw;
+    /* border: 0.08vw solid white; */
+    font-size: 27px;
+    line-height: 1.5vw;
+    border-radius: 5vw;
+}
+
+.btn:hover { /* зміна вигляду кнопки при наведенні, псевдоклас */
+    background-color: rgba(255, 255, 255, 0.184);
+    transition: .4s ease;
+}
+
+.menu { /* редагування вигляду головної панелі */
+    margin-top: 3vh;
+    display: flex; /* розташування на одному рівні */
+    justify-content: space-between; /* відстань між */
+}
+
+.menu a { /* редагування вигляду тегів */
+    font-size: 25px;
+    margin-right: 0.7vw; /* відступи між розділами меню */
+}
+
+.background_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("photo/background-image.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    z-index: -1; /* збільшимо z-index, щоб фон був за контентом */
+}
+
+.main h1 {
+    font-size: 35px;
+    text-align: left;
+    padding-top: 3vh;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    color: white;
+}
+
+.main h2 {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 5vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    color: white;
+}
+
+.main p {
+    font-size: 25px;
+    text-align: left;
+    padding-top: 4vh;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    text-align:left;
+    color: white;
+}
+
+.info_box {
+    width: 15vw;
+    height: 40vh;
+    margin-left: 15vw;
+    margin-top: 13vh;
+    margin-bottom: 12vh;
+    border-radius: 5vw;
+    background-color: transparent;
+    border: 0.09vw solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+}
+
+.shop_btn { /* програмування кнопки */
+    padding: 0.5vw;
+    font-size: 20px;
+    line-height: 1.5vw;
+    border-radius: 5vw;
+    background-color:white;
+    color: black;
+    /* border-color: black; */
+}
+
+.shop_btn:hover { /* зміна вигляду кнопки при наведенні, псевдоклас */
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: .4s ease;
+}
+
+.hero {
+    background-color: black;
+}
+
+.text h1 { /* редагування вигляду заголовка */
+    font-size: 40px;  
+    line-height: 2em;
+    color: white;
+    /* padding-bottom: 160px; */
+}
+
+.text p { /* редагування вигляду тексту */
+    font-size: 25px; 
+    text-align: justify;
+    justify-content: end;
+    line-height: 2em;
+    color: white;
+}
+
+.footer { /* створення вигляду footer */
+    background-color: black;
+    height: 184px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding-top: 80px;
+}

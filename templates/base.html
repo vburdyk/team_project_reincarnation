@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MUSEUM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"/>
+    {% block extra_css %}{% endblock %}
+    <style>
+        html {
+            scroll-behavior: smooth; /* повільно переходити з елемента на елемент */
+        }
+    </style>
+</head>
+<body>
+<header id="header" class="header">
+    <div class="container">
+        <div class="nav">
+            <h1 class="header_title">
+                <a href="">
+                    MUSEUM
+                </a>
+            </h1>
+            <nav class="menu">
+                <a href="shop.html" class="btn">
+                    Магазин
+                </a>
+                <ul>
+                    <li>
+                        <a href="visit.html">
+                            Відвідати
+                        </a>
+                    <li>
+                        <a href="exhibitions.html">
+                            Виставки та події
+                        </a>
+                    </li>
+                    <li>
+                        <a href="collections.html">
+                            Колекція
+                        </a>
+                    </li>
+                    <li>
+                        <a href="membership.html">
+                            Членство
+                        </a>
+                    </li>
+                    <li>
+                        <a href="supportus.html">
+                            Підтримати нас
+                        </a>
+                    </li>
+                    {% if user.is_authenticated %}
+                        <li>
+                            <p style="color: white">{{ request.user }}</p>
+                        </li>
+                    {% else %}
+                        <a href="{% url 'museum:signin' %}">
+                            Вхід
+                        </a>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+{% block content %}{% endblock %}
+</body>
+</html>
