@@ -39,7 +39,7 @@ def signin(request):
             login(request, user)
             return redirect('museum:index')
         else:
-            messages.error(request, "Дані введено некоректно")
+            messages.error(request, "Дані введено некоректно!!!")
 
     return render(request, 'login.html')
 
